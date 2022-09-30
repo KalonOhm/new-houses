@@ -24,7 +24,8 @@ export class HousesList extends React.Component {
 
     render() {
         return(
-            <div className='house-list'>
+            <div className='house-list text-center'>
+                <nav className='navbar container navbar-dark bg-light'>House List</nav>
                 {this.state.houses.map((house) => (
                     <House
                         house={house}

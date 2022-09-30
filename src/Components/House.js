@@ -17,17 +17,17 @@ export const House = (props) => {
     const rooms = () => (
         <ul>
             {house.rooms.map((room, index) => (
-                <li key={index}>
-                    <label> {`${room.name} Area: ${room.area}`}</label>
-                    <button onClick={(event) => deleteRoom(room._id)}>Delete</button>
-                </li>
+                <div key={index}>
+                    <label > {`${room.name} Area: ${room.area} sqft  `}</label><span>    </span>
+                    <button className="btn btn-warning" onClick={(event) => deleteRoom(room._id)}>Delete</button>
+                </div>
             ))}
         </ul>
     );
 
     return (
-        <div>
-            <h1>{House.name}</h1>
+        <div className="card">
+            <h1 className="card-header">{House.name}</h1>
             {
                 rooms({ rooms, houseId: house._id, deleteRoom })
             }
